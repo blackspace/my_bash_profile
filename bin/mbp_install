@@ -1,0 +1,23 @@
+#!/bin/env bash
+
+
+MBP_ROOT=$(cd `dirname $0`/.. && pwd)
+
+if ! grep '#My Bash Profile' ~/.bash_profile &>/dev/null ;then
+    echo Installing My Bash Profile 
+
+    echo '#My Bash Profile' >> ~/.bash_profile
+    echo "export MBP_ROOT=$MBP_ROOT"  >> ~/.bash_profile
+    echo 'export PATH=$MBP_ROOT/bin:$PATH' >> ~/.bash_profile
+
+    cat >> ~/.bash_profile <<'EOF'
+if [ -d $MBP_ROOT  ]; then
+	for  script in $(ls $MBP_ROOT/*.sh 2>/dev/null); do
+		. $script
+	done 
+fi
+EOF
+
+
+    echo Installing is finished 
+fi

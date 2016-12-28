@@ -1,0 +1,5 @@
+#!/bin/env bash
+
+if [ -n $MBP_ROOT ];then
+    ln -s $MBP_ROOT/lib/$1* $MBP_ROOT
+fi
