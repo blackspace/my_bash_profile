@@ -1,1 +1,0 @@
-/home/apple/.my_bash_profile.d/lib/oracle_12c_server.sh

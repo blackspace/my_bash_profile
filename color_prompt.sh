@@ -1,1 +1,0 @@
-/home/apple/.my_bash_profile.d/lib/color_prompt.sh
