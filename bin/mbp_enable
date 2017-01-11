@@ -2,4 +2,6 @@
 
 if [ -n "$MBP_ROOT" ];then
     ln -s $MBP_ROOT/lib/$1* $MBP_ROOT
+else
+    echo $1 is not exist.
 fi
